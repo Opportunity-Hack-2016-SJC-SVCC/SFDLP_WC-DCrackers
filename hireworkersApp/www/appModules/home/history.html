@@ -1,0 +1,42 @@
+<ion-view title="Past History" hide-back-button="true" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+  <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-search-strong" ng-click="showFilterBar()"></button>
+        </button>
+        <!--<filter-box placeholder="Enter Zipcode" filtertext="search"></filter-box>  -->
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+    <ion-content class="has-tabs-top" has-header="true">
+       <!-- <div class="bar bar-header item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="search" ng-keyup="getSearchRes(search)">
+            </label>
+        </div>-->
+        
+     
+
+    <div class="card" ng-repeat="request in items">
+  <div class="item item-divider">
+   Type: {{request.typeofservice}}
+  </div>
+  <div class="item item-text-wrap">
+    Time: {{request.datetimestring}} <br />
+    Address: {{request.address}}<br />
+    #Workers: {{request.numberofworkers}}<br />
+
+  </div>
+  <div class="item item-divider">
+    {{request.status}}
+    <span style="float:right" ng-click="giveFeedback(request)">Feedback</span>
+  </div>
+</div>
+
+
+
+
+
+    </ion-content>
+</ion-view>

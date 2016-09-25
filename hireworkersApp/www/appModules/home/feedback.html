@@ -1,0 +1,44 @@
+<ion-view title="Feedback" hide-back-button="true" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+  <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-search-strong" ng-click="showFilterBar()"></button>
+        </button>
+        <!--<filter-box placeholder="Enter Zipcode" filtertext="search"></filter-box>  -->
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+    <ion-content class="has-tabs-top" has-header="true">
+       <!-- <div class="bar bar-header item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="search" ng-keyup="getSearchRes(search)">
+            </label>
+        </div>-->
+        
+     
+    <div align="center">    
+   <rating ng-model="feedbackRequest.feedbackstar" max="rating.max"></rating>
+<form >
+   <label class="item item-input">
+		    <div class="input-label">
+		     <i class="icon ion-ios-telephone"></i>
+		      <input type="text" placeholder="How was the service ?" ng-model="feedbackRequest.feedbackcomment" class="" />
+		    </div>
+		   
+		  </label>
+   
+</form>
+   </div>
+   <br />
+   <br />
+   <div align="center">
+          <button class="button button-large button-balanced"  ng-click="giveFeedback()">Give Feedback!</button>
+         </div>
+
+
+
+
+
+    </ion-content>
+</ion-view>

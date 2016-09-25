@@ -1,0 +1,79 @@
+<ion-view title="Hire Workers" hide-back-button="true" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+	<ion-nav-buttons side="right">
+       	<button class="button button-icon icon ion-ios-search-strong" ng-click="showFilterBar()"></button>
+        </button>
+        <!--<filter-box placeholder="Enter Zipcode" filtertext="search"></filter-box>  -->
+	</ion-nav-buttons>
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	
+    <ion-content class="has-tabs-top" has-header="true">
+       <!-- <div class="bar bar-header item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="search" ng-keyup="getSearchRes(search)">
+            </label>
+        </div>-->
+       <form ng-submit="formReques()">
+        <div class="list">
+
+		  <label class="item item-input item-select">
+		    <div class="input-label">
+		      What Work ?
+		    </div>
+		    <select ng-model="requestData.type">
+		      <option selected>House Cleaning</option>
+		      <option>Gardening</option>
+		      <option>Painting</option>
+		      <option>Moving</option>
+		    </select>
+		  </label>
+
+
+
+		  <label class="item item-input" ng-click="showDatetimePicker()">
+		    <div class="input-label">
+		      What Time ?
+
+		     <span>{{requestData.datetimestring}}</span>
+		    </div>
+		    
+		    
+		  </label>
+
+		   <label class="item item-input item-select">
+		    <div class="input-label">
+		      Number of Workers ?
+		    </div>
+		    <select ng-model="requestData.numberofworkers">
+		      <option selected>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		    </select>
+		  </label>
+
+		  <label class="item item-input">
+		    <div class="input-label">
+		      Where ?
+
+		     <input type="text" placeholder="address" ng-model="requestData.address" />
+		    </div>
+		    
+		    
+		  </label>
+		  
+
+		</div>
+		<br />
+		<div align="center">
+          <button class="button button-large button-balanced"  ng-click="formRequest()">Request</button>
+         </div>
+
+		
+        </form>
+
+    </ion-content>
+</ion-view>
+

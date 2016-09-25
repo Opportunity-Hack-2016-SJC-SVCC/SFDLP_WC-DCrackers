@@ -1,0 +1,26 @@
+<ion-view title="Hire Workers" hide-back-button="true" >
+  <ion-nav-bar class="bar-assertive">
+  </ion-nav-bar>
+  <ion-content has-header="true" has-tabs="true" padding="true" >
+    <form ng-submit="tryLogin()">
+      <div class="list ">
+       
+        <label class="item item-input">
+        <i class="icon ion-ios-email"></i>
+        <input type="email" placeholder="Email" ng-model="loginData.email" >
+        </label>
+        <label class="item item-input">
+        <i class="icon ion-ios-eye"></i>
+        <input type="password" placeholder="Password" ng-model="loginData.password" >
+        </label>
+        <div>
+          <button class="button button-block button-dark" type="submit">SignIn !</button>
+        </div>
+
+        <div align="center">
+          <a ui-sref="register">Click here for SignUp !</a>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

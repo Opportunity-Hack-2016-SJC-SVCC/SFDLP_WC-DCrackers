@@ -1,0 +1,24 @@
+<ion-view title="Notifyer" hide-back-button="true" >
+  <ion-nav-bar class="bar-assertive">
+  </ion-nav-bar>
+  <ion-content has-header="true" has-tabs="true" padding="true">
+      Please wait, your verification code will be received through message!
+        <form ng-submit="tryVerifySms()">
+            <div class="list ">
+                <label class="item item-input">
+                    <i class="icon  ion-person"></i>
+                    <input type="tel" placeholder="Verification Code" ng-model="registerData.smsCode">
+                </label>
+                <div>
+                    <button class="button button-block button-dark" type="submit">Verify Code !</button>
+                </div>
+            </div>
+        </form>
+        <div>
+          <button class="button button-block button-positive" ng-click="ResendCode()">Resend verification code</button>
+        </div>
+      <div>
+          <button class="button button-block button-assertive" ng-click="ChangeNum()">Change Mobile Number</button>
+        </div>
+  </ion-content>
+</ion-view>
